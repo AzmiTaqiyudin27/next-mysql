@@ -1,0 +1,35 @@
+GET  http://localhost:3000/api/users
+
+###
+GET  http://localhost:3000/users/1
+
+###
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+            foto : "",
+            nama: "Azmi Taqiyudin",
+            nik: "3302202708010001",
+            ttl: "Banyumas, 27 Agustus 2001",
+            agama: "Islam",
+            namaIbu: "Haryati",
+            email: "azmitaqiyudin@gmail.com",
+            noTelfon: "0895704317298",
+            alamat: "Ledug, Kembaran, Banyumas",
+            sekolah: "SMA N 1 Purwokertp",
+            nilaiSma: "99.99",
+            jurusan1: "Informatika",
+}
+
+###
+PATCH http://localhost:3000/users/1
+Content-Type: application/json
+
+
+{
+    
+}
+
+###
+DELETE  http://localhost:3000/users/1

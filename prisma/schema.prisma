@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model user {
+  id      Int      @id @default(autoincrement())
+  nama    String   @db.VarChar(255)
+  email   String   @unique
+}
+
+model profile{
+  id        Int      @id @default(autoincrement())
+  foto      String?  @db.VarChar(255)
+  nama      String   @db.VarChar(255)
+  nik       String   @db.VarChar(255)      
+  ttl       String   @db.VarChar(255)
+  agama     String   @db.VarChar(255)
+  namaIbu   String   @db.VarChar(255)
+  email     String   @unique
+  noTelfon  String   @db.VarChar(255)      
+  alamat    String   @db.VarChar(255)
+  sekolah   String   @db.VarChar(255)
+  nilaiSma  String   @db.VarChar(255) 
+  jurusan1  String   @db.VarChar(255)
+}
